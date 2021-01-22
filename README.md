@@ -13,7 +13,16 @@ It will then ask for the location of your guppy_basecaller and guppy_basecall co
 
 If you want to change the config file just rerun the setup.
 
-Now that the setup is done run 
+Now that the setup is done run LMToolkit.py in terminal.
+The program is going to ask for the location of the fast5 folder created by Minknow, what you wish to name the output folder and whether your sample contained plasmids (used by Flye for assembly). 
+
+The outputs from Guppy will be found in /MinionOut as .fastq files the program will also combine them into a singular .fastq file named what you named the output.
+
+The output from Flye will be found in /Assembly_Out as assembly.fasta. 
+
+All information and errors from the individual program will also show in the terminal along with the programs data as well.
+
+
 
 
 https://github.com/fenderglass/Flye
