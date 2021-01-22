@@ -16,18 +16,18 @@ import os
 #basecallconfig=input("Drag and Drop the guppy_basecaller you wish to use here (should be found in /ont-guppy/data/):  ")
 with open("Documents/LMToolkit/config.txt","r") as basecallpath:
     basecall=basecallpath.read()
-    print(basecall)
+    print("This is your basecaller path " + basecall)
 with open("Documents/LMToolkit/guppyconfig.txt","r") as configpath:
     basecallconfig=configpath.read()
-    print(basecallconfig)    
+    print("This is your config file path " + basecallconfig)    
 qinputgup=input("What is the name of the input fast5 folder (drag and drop it here): ")
 folderoutgup=input("What would you like to the name the output folder?:  ")
-q1=input("Is this a plasmid? [y/N]:  ")
-q2=input("How big is the expected output?:  ")
+q1=input("Are you expecting plasmids? [y/N]:  ")
+
 
 print("The output of guppy will be found here: /Documents/LMToolkit/MinionOut/"+folderoutgup)
 outpathgup="Documents/LMToolkit/MinionOut/"+folderoutgup
-print(outpathgup)
+
 outpathgupfinal=outpathgup
 try:
 	os.system("mkdir " + outpathgup)
@@ -52,7 +52,7 @@ os.chdir(folderin) #Check 2 for strip
 os.system('cat ' '*.fastq ' '>' +outfilename)
 
 #Flye Start
-print(folderin)
+
 
 qinput=outfilename
 
@@ -62,7 +62,7 @@ elif q1=='N':
     plasmid=" "
 else:
     q1
-
+os.chdir(os.path.expanduser("~"))
 print("The assembled output will be found here: Documents/LMToolkit/Assembly_Out/"+folderoutgup)
 outpath="Documents/LMToolkit/Assembly_Out/"+folderoutgup
 outpath1="'"+outpath+"'"
@@ -71,9 +71,9 @@ try:
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
-
-
-string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 6 ' ' --nano-raw ' + qinput + " " + plasmid 
+inassemble=outpathgupfinal+"/"+outfilename
+print(inassemble)
+string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 6 ' ' --nano-raw ' + inassemble + " " + plasmid 
 print(string2)
 os.system(string2)
-
+print("This program has now finished!") 
