@@ -23,6 +23,8 @@ The output from Flye will be found in /Assembly_Out as assembly.fasta.
 All information and errors from the individual program will also show in the terminal along with the programs data as well.
 
 
+I hope this simplifies analysis for anyone new to ONT basecalling and assembly! 
+
 
 
 https://github.com/fenderglass/Flye
