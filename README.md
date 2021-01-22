@@ -27,7 +27,7 @@ I hope this simplifies analysis for anyone new to ONT basecalling and assembly!
 
 
 
-https://github.com/fenderglass/Flye
+https://github.com/fenderglass/Flye required
 
 and
 
