@@ -27,8 +27,8 @@ I hope this simplifies analysis for anyone new to ONT basecalling and assembly!
 
 
 
-https://github.com/fenderglass/Flye required
+https://github.com/fenderglass/Flye required (installed during setup)
 
 and
 
-ONT's GPU Based Guppy Required. 
+ONT's GPU Based Guppy Required (needs to be installed from ONT). 
