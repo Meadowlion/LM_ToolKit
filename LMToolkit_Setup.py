@@ -7,49 +7,62 @@ Created on Fri Jan 22 10:19:44 2021
 """
 import os
 import errno
+from os.path import expanduser
 os.system("sudo apt-get install python 3.8")
 os.system("conda install flye")
+
 try:
-	os.system("mkdir -p Documents/LMToolkit")
+	os.system("mkdir -p ~/Documents/LMToolkit")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 try:
-	os.system("mkdir -p Documents/LMToolkit/MinionOut")
+	os.system("mkdir -p ~/Documents/LMToolkit/MinionOut")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 try:
-	os.system("mkdir -p Documents/LMToolkit/Assembly_Out")
+	os.system("mkdir -p ~/Documents/LMToolkit/Assembly_Out")
+except OSError as e:
+	if e.errno != errno.EEXIST:
+		raise
+Download=str(os.environ['_'])
+
+
+Downloads=Download.replace('/LMToolkit_Setup.py','')
+print("THIS IS A TEST " + Downloads)
+os.chdir(Downloads)
+os.system("dir")
+Dir=Downloads+"/"
+print("mv LMToolKit.py ~/Documents/LMToolkit")
+try:
+	os.system("mv LMToolkit.py ~/Documents/LMToolkit/LMToolkit.py")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 try:
-	os.system("mv LMToolKit.py Documents/LMToolkit/")
+	os.system("mv README.md ~/Documents/LMToolkit/README.md")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 try:
-	os.system("mv README.md Documents/LMToolkit/")
+	os.system("mv LMToolKit_License ~/Documents/LMToolkit/LMToolKit_License")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 try:
-	os.system("mv 'LMToolkit License' Documents/LMToolkit/")
-except OSError as e:
-	if e.errno != errno.EEXIST:
-		raise
-try:
-	os.system("mv 'Flye License' Documents/LMToolkit/")
+	os.system("mv Flye_License ~/Documents/LMToolkit/Flye_License")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 def main():
-    with open("Documents/LMToolkit/config.txt", "w") as config1:
+    hdir=expanduser('~')
+    os.chdir(hdir+'/Documents/LMToolkit')
+    with open("config.txt", 'w') as config1:
         Basecall=input("What is the path of your guppy basecaller?:  ")
         config1.write(Basecall)
         config1.close()
-    with open("Documents/LMToolkit/guppyconfig.txt", "w") as config2:
+    with open("guppyconfig.txt", "w") as config2:
         Basecallconfig=input("What is the path of your guppy basecaller config file (450_bps_fast.cfg recommended)?:  ")
         config2.write(Basecallconfig)
         config2.close()
