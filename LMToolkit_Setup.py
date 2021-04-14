@@ -24,6 +24,26 @@ try:
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
+try:
+	os.system("mv LMToolKit.py Documents/LMToolkit/")
+except OSError as e:
+	if e.errno != errno.EEXIST:
+		raise
+try:
+	os.system("mv README.md Documents/LMToolkit/")
+except OSError as e:
+	if e.errno != errno.EEXIST:
+		raise
+try:
+	os.system("mv 'LMToolkit License' Documents/LMToolkit/")
+except OSError as e:
+	if e.errno != errno.EEXIST:
+		raise
+try:
+	os.system("mv 'Flye License' Documents/LMToolkit/")
+except OSError as e:
+	if e.errno != errno.EEXIST:
+		raise
 def main():
     with open("Documents/LMToolkit/config.txt", "w") as config1:
         Basecall=input("What is the path of your guppy basecaller?:  ")
