@@ -29,7 +29,7 @@ except OSError as e:
 Download=str(os.environ['_'])
 
 
-Downloads=Download.replace('/LMToolkit_Setup.py','')
+#Downloads=Download.replace('/LMToolkit_Setup.py','')
 print("THIS IS A TEST " + Downloads)
 os.chdir(Downloads)
 print("mv LMToolKit.py ~/Documents/LMToolkit")
