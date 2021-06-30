@@ -31,9 +31,7 @@ Download=str(os.environ['_'])
 
 Downloads=Download.replace('/LMToolkit_Setup.py','')
 print("THIS IS A TEST " + Downloads)
-
-os.system("dir")
-Dir=Downloads+"/"
+os.chdir(Downloads)
 print("mv LMToolKit.py ~/Documents/LMToolkit")
 try:
 	os.system("mv LMToolKit.py ~/Documents/LMToolkit/LMToolkit.py")
