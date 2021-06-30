@@ -13,7 +13,7 @@ It will then ask for the location of your guppy_basecaller and guppy_basecall co
 
 If you want to change the config file just rerun the setup.
 
-Now that the setup is done run LMToolkit.py in terminal.
+Now that the setup is done cd to LM_Toolkit and run LMToolkit.py in terminal.
 The program is going to ask for the location of the fast5 folder created by Minknow, what you wish to name the output folder and whether your sample contained plasmids (used by Flye for assembly). 
 
 The outputs from Guppy will be found in /MinionOut as .fastq files the program will also combine them into a singular .fastq file named what you named the output.
@@ -31,4 +31,4 @@ https://github.com/fenderglass/Flye required (installed during setup)
 
 and
 
-ONT's GPU Based Guppy Required (needs to be installed from ONT). 
+ONT's GPU Based Guppy Required (needs to be installed from ONT) version 4.2.2 recommended. 
