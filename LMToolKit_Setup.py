@@ -50,13 +50,10 @@ try:
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
-try:
-	os.system("mv Flye_License ~/Documents/LMToolkit/Flye_License")
-except OSError as e:
-	if e.errno != errno.EEXIST:
-		raise
+
 def main():
-    hdir=expanduser('~')
+    #hdir=expanduser('~')
+    hdir="home/"
     os.chdir(hdir+'/Documents/LMToolkit')
     with open("config.txt", 'w') as config1:
         Basecall=input("What is the path of your guppy basecaller?:  ")
