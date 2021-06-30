@@ -52,8 +52,8 @@ except OSError as e:
 		raise
 
 def main():
-    #hdir=expanduser('~')
-    hdir="home/"
+    hdir=os.path.expanduser('~')
+   
     os.chdir(hdir+'/Documents/LMToolkit')
     with open("config.txt", 'w') as config1:
         Basecall=input("What is the path of your guppy basecaller?:  ")
