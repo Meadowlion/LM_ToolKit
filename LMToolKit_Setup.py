@@ -26,7 +26,7 @@ try:
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
-Download=str(os.environ['_'])
+Downloads=str(os.environ['_'])
 
 
 #Downloads=Download.replace('/LMToolkit_Setup.py','')
