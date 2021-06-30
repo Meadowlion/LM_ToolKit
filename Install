@@ -1,0 +1,4 @@
+$ cd DirectoryYouWantToCloneInto
+$ git clone https://github.com/Meadowlion/LM_ToolKit
+$ cd LM_Toolkit
+$ python3 LMToolKit_Setup.py
