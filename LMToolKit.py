@@ -61,7 +61,7 @@ if q1=='y':
 elif q1=='N':
     plasmid=" "
 else:
-    q1
+    plasmid='--plasmid'
 os.chdir(os.path.expanduser("~"))
 print("The assembled output will be found here: Documents/LMToolkit/Assembly_Out/"+folderoutgup)
 outpath="Assembly_Out/"+folderoutgup
