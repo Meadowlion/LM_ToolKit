@@ -32,4 +32,4 @@ https://github.com/fenderglass/Flye required (installed during setup)
 
 and
 
-ONT's GPU Based Guppy Required (needs to be installed from ONT) version 4.2.2 recommended. 
+ONT's GPU Based Guppy Required (needs to be installed from ONT) version 4.2.2. 
