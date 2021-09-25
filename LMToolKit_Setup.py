@@ -9,7 +9,7 @@ import os
 import errno
 from os.path import expanduser
 os.system("sudo apt-get install python 3.8")
-os.system("conda install flye")
+os.system("git clone https://github.com/fenderglass/Flye", "cd Flye", "make")
 
 try:
 	os.system("mkdir -p ~/Documents/LMToolkit")
