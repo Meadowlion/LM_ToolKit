@@ -8,7 +8,9 @@ Created on Fri Jan 22 10:19:44 2021
 import os
 import errno
 from os.path import expanduser
-os.system("sudo apt-get install python 3.8")
+os.system("sudo apt-get update")
+os.system("ssudo apt install nvidia-cuda-toolkit") 
+os.system("sudo apt install python 3.8")
 os.system("conda install flye")
 
 try:
