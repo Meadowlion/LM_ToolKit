@@ -5,7 +5,7 @@ Created on Thu Jan 14 17:08:19 2021
 
 @author: sb069
 """
-
+import subprocess
 import errno
 import os 
 #Guppy Start 
@@ -47,9 +47,9 @@ print(folderin) #check 1 for strip
 outfilename=folderoutgup
 outfilename=outfilename +'.fastq'
 print("the merged file will be located in " + folderin + " named as " + outfilename)
-os.chdir(folderin) #Check 2 for strip 
-
-os.system('cat ' '*.fastq ' '>' +outfilename)
+#os.chdir(folderin) #Check 2 for strip 
+string3 = str('cd ' + folderin + ";" + "cat *.fastq > " + outfilename)
+subprocess.run(string3, shell=True)
 
 #Flye Start
 
@@ -62,8 +62,8 @@ elif q1=='N':
     plasmid=" "
 else:
     plasmid='--plasmid'
-os.chdir(os.path.expanduser("~"))
-print("The assembled output will be found here: Documents/LMToolkit/Assembly_Out/"+folderoutgup)
+
+print("The assembled output will be found here: " , folderoutgup)
 outpath="Assembly_Out/"+folderoutgup
 outpath1="'"+outpath+"'"
 try:
