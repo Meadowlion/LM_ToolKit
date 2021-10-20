@@ -12,6 +12,8 @@ To get started you will
 
 cd to the LMToolkit directory
 
+(Install commands located in INSTALL file)
+
 run LMToolKit_Setup.py (python3 LMToolKit_Setup.py) this will run  "sudo apt-get update" , "sudo apt-get install python3.8" and "conda install flye". These will install 
 python3.8 and flye for you if you do not already have them.
 
