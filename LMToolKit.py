@@ -35,7 +35,9 @@ except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
 string1='sudo  ' + basecall + '  -i ' + qinputgup +  ' -s ' + outpathgupfinal +  ' -c ' + basecallconfig + ' -x ' '"cuda:0"'
+print(string1)
 os.system(string1)
+
 
 #Merger Start
 
@@ -49,6 +51,7 @@ outfilename=outfilename +'.fastq'
 print("the merged file will be located in " + folderin + " named as " + outfilename)
 #os.chdir(folderin) #Check 2 for strip 
 string3 = str('cd ' + folderin + ";" + "cat *.fastq > " + outfilename)
+print(string3)
 subprocess.run(string3, shell=True)
 
 #Flye Start
