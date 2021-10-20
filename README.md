@@ -46,6 +46,8 @@ ONT's GPU Based Guppy Required (needs to be installed from ONT) version 4.2.2.
 
 if bioconda is not installed first install bioconda: 
 ```
+sudo apt update 
+sudo apt install curl
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
 conda config --add channels defaults
