@@ -12,8 +12,8 @@ To get started you will
 
 cd to the LMToolkit directory
 
-run LMToolKit_Setup.py (python3 LMToolKit_Setup.py, (this will run  "sudo apt-get update" , "sudo apt-get install python3.8" and "conda install flye". These will install 
-python3.8 and flye for you if you do not already have them.) 
+run LMToolKit_Setup.py (python3 LMToolKit_Setup.py) this will run  "sudo apt-get update" , "sudo apt-get install python3.8" and "conda install flye". These will install 
+python3.8 and flye for you if you do not already have them.
 
 The program next will create a directory in Documents; Ie Documents/LMToolkit/ with /MinionOut and /Assembly_Out as subdirectories.
 
