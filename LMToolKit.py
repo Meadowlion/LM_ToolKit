@@ -76,7 +76,7 @@ except OSError as e:
 		raise
 inassemble=outpathgupfinal+"/"+outfilename
 print(inassemble)
-string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 6 ' ' --nano-raw ' + inassemble + " " + plasmid 
+string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 3 ' ' --nano-raw ' + inassemble + " " + plasmid 
 print(string2)
 os.system(string2)
 print("This program has now finished!") 
