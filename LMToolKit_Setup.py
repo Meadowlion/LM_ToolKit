@@ -10,7 +10,7 @@ import errno
 from os.path import expanduser
 os.system("sudo apt-get update")
 os.system("sudo apt install nvidia-cuda-toolkit") 
-os.system("sudo apt install python 3.8")
+os.system("sudo apt install python3.8")
 os.system("conda install flye")
 
 try:
