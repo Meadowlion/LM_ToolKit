@@ -9,8 +9,11 @@ The program will automatically install Flye
 GETTING STARTED 
 
 To get started you will 
+
 cd to the LMToolkit directory
-run LMToolKit_Setup.py (python3 LMToolKit_Setup.py, (this will run  "sudo apt-get update" , "sudo apt-get install python3.8" and "conda install flye". These will install python3.8 and flye for you if you do not already have them.) 
+
+run LMToolKit_Setup.py (python3 LMToolKit_Setup.py, (this will run  "sudo apt-get update" , "sudo apt-get install python3.8" and "conda install flye". These will install 
+python3.8 and flye for you if you do not already have them.) 
 
 The program next will create a directory in Documents; Ie Documents/LMToolkit/ with /MinionOut and /Assembly_Out as subdirectories.
 
@@ -20,7 +23,8 @@ If you want to change the config file just rerun the setup.
 
 RUNNING LM_TOOLKIT:
 
-Now that the setup is done cd to LM_Toolkit and run LMToolkit.py in terminal.
+Now that the setup is done cd to LM_Toolkit and run LMToolkit.py in terminal. (python3 LMToolkit.py)
+
 The program is going to ask for the location of the fast5 folder created by Minknow, what you wish to name the output folder and whether your sample contained plasmids (used by Flye for assembly). 
 
 The outputs from Guppy will be found in /MinionOut as .fastq files the program will also combine them into a singular .fastq file named what you named the output without modifying any of the original FASTQ files.
