@@ -36,7 +36,7 @@ except OSError as e:
 #os.chdir(Downloads)
 #print("mv LMToolKit.py ~/Documents/LMToolkit")
 try:
-	os.system("mv LMToolKit.py ~/Documents/LMToolkit/LMToolkit.py")
+	os.system("mv LMToolkit.py ~/Documents/LMToolkit/LMToolkit.py")
 except OSError as e:
 	if e.errno != errno.EEXIST:
 		raise
