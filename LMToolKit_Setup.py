@@ -56,11 +56,11 @@ def main():
    
     os.chdir(hdir+'/Documents/LMToolkit')
     with open("config.txt", 'w') as config1:
-        Basecall=input("What is the path of your guppy basecaller?:  ")
+        Basecall=input("What is the path of your guppy basecaller (ont-guppy/bin/guppy_basecaller)?:  ")
         config1.write(Basecall)
         config1.close()
     with open("guppyconfig.txt", "w") as config2:
-        Basecallconfig=input("What is the path of your guppy basecaller config file (450_bps_fast.cfg recommended)?:  ")
+        Basecallconfig=input("What is the path of your guppy basecaller config file (ont-guppy/data/config) please read readme for details )?:  ")
         config2.write(Basecallconfig)
         config2.close()
     print("LMToolKit is now setup! Happy Basecalling!")
