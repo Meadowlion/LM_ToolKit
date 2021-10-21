@@ -19,7 +19,8 @@ python3.8 and flye for you if you do not already have them.
 
 The program next will create a directory in Documents; Ie Documents/LMToolkit/ with /MinionOut and /Assembly_Out as subdirectories.
 
-It will then ask for the location of your guppy_basecaller and guppy_basecall config file (450_bps_hac.cfg is only recommended on high end PCs 450_bps_fast.cfg is recommended for DNA). 
+It will then ask for the location of your guppy_basecaller and guppy_basecall config file 
+450_bps_hac.cfg is only recommended on high end PCs 450_bps_fast.cfg is recommended for most read the readme in ont-guppy for more info!
 
 If you want to change the config file just rerun the setup.
 
