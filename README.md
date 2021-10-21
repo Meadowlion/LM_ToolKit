@@ -49,7 +49,7 @@ and
 
 ONT's GPU Based Guppy Required (needs to be installed from ONT) version 4.2.2. 
 
-if bioconda is not installed first install bioconda: 
+if flye does not install during setup it is mostly likely because bioconda is not installed. Try to first install bioconda: 
 ```
 sudo apt update 
 sudo apt install curl
