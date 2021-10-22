@@ -3,7 +3,7 @@
 LMToolkit is a small command line pipeline to simplify going from ONT raw data to basecalling using Guppy to Assembly using Flye and Alignments using Guppy_Aligner, all of the tools are existing tools. This pipeline is designed to be beginner friendly for people new to Nanopore Bioinformatics and Bioinformatics as a whole. The input command used is shown for each program to help guide advanced usage of the linked programs. It is constantly being updated and tweaked for new nanopore updates and to enhance the user experience. The install file contains the basic commands to get started. Please make an issue thread if you have any questions!
 
 
-This pipeline is only for Linux due to its reliance on Flye and the GPU Based Version of ONT's Guppy. It may run on windows using WSL2 and Ubuntu. 
+This pipeline is only for Linux due to its reliance on Flye and the CPU Based Version of ONT's Guppy. It may run on windows using WSL2 and Ubuntu. 
 (The setup is for debian based Linux Distros due to APT but should run on other Linux distros if Flye and Python3 are installed manually) 
 
 
