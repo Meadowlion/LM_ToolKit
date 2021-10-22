@@ -58,6 +58,8 @@ def basecalling():
     global outfilename
     global plasmid
     global outpathgup
+    global outpath1 
+    global outpath
     try:
         os.system("mkdir " + outpathgup)
     except OSError as e:
@@ -66,7 +68,8 @@ def basecalling():
     string1='sudo  ' + basecall + '  -i ' + qinputgup +  ' -s ' + outpathgupfinal +  ' -c ' + basecallconfig
     print(string1)
     os.system(string1)
-
+    outpath="Assembly_Out/"+folderoutgup
+    outpath1="'"+outpath+"'"
 
 #Merger Start
 
@@ -82,6 +85,8 @@ def basecalling():
     string3 = str('cd ' + folderin + ";" + "cat *.fastq > " + outfilename)
     print(string3)
     subprocess.run(string3, shell=True)
+    
+
     if Assembleq == "y" and Alignq == "y" :
         flye()
     elif Assembleq == "N" and Alignq== "y":
@@ -92,6 +97,7 @@ def basecalling():
         flye()
     else:
         (flye)
+    
 #Flye Start
 
 def flye():
@@ -111,6 +117,8 @@ def flye():
     global outpathgup
     global inassemble
     global outpath1   
+    global outpath
+    
     qinput=outfilename
 
     if q1=='y':
@@ -120,16 +128,14 @@ def flye():
     else:
         plasmid='--plasmid'
 
-    print("The assembled output will be found here: " , folderoutgup)
-    outpath="Assembly_Out/"+folderoutgup
-    outpath1="'"+outpath+"'"
+    
     try:
         os.system("mkdir -p " +outpath )
     except OSError as e:
       if e.errno != errno.EEXIST:
           raise
     inassemble=outpathgupfinal+"/"+outfilename
-    print(inassemble)
+    print("The assembled output will be found here: " + outpath)
     string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 3 ' ' --nano-raw ' + inassemble + " " + plasmid 
     print(string2)
     os.system(string2)
@@ -145,9 +151,9 @@ def Align():
     global refpath 
     
     alignpath=basecall.replace("basecaller","aligner")
-    stringalign= 'sudo ' + alignpath +  "-i " + outpathgupfinal + " -s " + outpath1 + " -a " + refpath
+    stringalign= 'sudo ' + alignpath +  "-i " + outpathgupfinal + " -s " + outpath1 + " -a " + refpath + " --bam"
     print(stringalign)
     os.system(stringalign)
-    
+    print("This program has now finished!")
 main()
     
