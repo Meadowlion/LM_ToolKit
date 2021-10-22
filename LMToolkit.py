@@ -120,7 +120,6 @@ def flye():
     else:
         plasmid='--plasmid'
 
-    print("The assembled output will be found here: " , folderoutgup)
     outpath="Assembly_Out/"+folderoutgup
     outpath1="'"+outpath+"'"
     try:
@@ -129,7 +128,7 @@ def flye():
       if e.errno != errno.EEXIST:
           raise
     inassemble=outpathgupfinal+"/"+outfilename
-    print(inassemble)
+    print("The assembled output will be found here: " + outpath)
     string2='flye ' '-o ' + outpath1 + ' --threads 14 ' '-i 3 ' ' --nano-raw ' + inassemble + " " + plasmid 
     print(string2)
     os.system(string2)
@@ -145,7 +144,7 @@ def Align():
     global refpath 
     
     alignpath=basecall.replace("basecaller","aligner")
-    stringalign= 'sudo ' + alignpath +  "-i " + outpathgupfinal + " -s " + outpath1 + " -a " + refpath
+    stringalign= 'sudo ' + alignpath +  "-i " + outpathgupfinal + " -s " + outpath1 + " -a " + refpath + " --bam"
     print(stringalign)
     os.system(stringalign)
     
