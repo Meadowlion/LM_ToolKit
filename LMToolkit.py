@@ -63,7 +63,7 @@ def basecalling():
     except OSError as e:
 	    if e.errno != errno.EEXIST:
 		    raise
-    string1='sudo  ' + basecall + '  -i ' + qinputgup +  ' -s ' + outpathgupfinal +  ' -c ' + basecallconfig + ' -x ' '"cuda:0"'
+    string1='sudo  ' + basecall + '  -i ' + qinputgup +  ' -s ' + outpathgupfinal +  ' -c ' + basecallconfig
     print(string1)
     os.system(string1)
 
